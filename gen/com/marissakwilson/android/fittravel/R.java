@@ -2085,7 +2085,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0042;
         public static final int action_mode_bar_stub=0x7f0c0041;
         public static final int action_mode_close_button=0x7f0c0034;
-        public static final int action_settings=0x7f0c0056;
+        public static final int action_settings=0x7f0c0057;
         public static final int activity_chooser_view_content=0x7f0c0035;
         public static final int adjust_height=0x7f0c0009;
         public static final int adjust_width=0x7f0c000a;
@@ -2119,8 +2119,9 @@ containing a value of this type.
         public static final int image=0x7f0c0037;
         public static final int listMode=0x7f0c0020;
         public static final int list_item=0x7f0c0039;
-        public static final int map=0x7f0c0053;
+        public static final int map=0x7f0c0056;
         public static final int match_parent=0x7f0c0017;
+        public static final int metric_checkbox=0x7f0c0053;
         public static final int middle=0x7f0c0031;
         public static final int monochrome=0x7f0c001f;
         public static final int never=0x7f0c002b;
@@ -2210,9 +2211,11 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int activity_settings=0x7f030017;
-        public static final int fragment_settings=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int activity_trip=0x7f030017;
+        public static final int fragment_measurement=0x7f030018;
+        public static final int fragment_settings=0x7f030019;
+        public static final int map_activity=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
     }
     public static final class menu {
         public static final int settings=0x7f0d0000;
@@ -2280,6 +2283,8 @@ containing a value of this type.
         public static final int accept=0x7f070002;
         public static final int action_settings=0x7f070035;
         public static final int app_name=0x7f070033;
+        public static final int change_ending_local=0x7f07003c;
+        public static final int change_starting_local=0x7f07003b;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f070009;
@@ -2382,8 +2387,13 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f070005;
         public static final int create_calendar_title=0x7f070004;
         public static final int decline=0x7f070003;
+        public static final int fitbit_link_label=0x7f070039;
+        public static final int fitbit_sync_button=0x7f07003a;
+        public static final int fitbit_title_label=0x7f070038;
         public static final int hello_world=0x7f070034;
-        public static final int settings_label=0x7f070036;
+        public static final int measurement_title_label=0x7f070037;
+        public static final int new_trip_button=0x7f07003d;
+        public static final int settings_title_label=0x7f070036;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
         /**  Text on a placeholder buy button when Google Play services is not

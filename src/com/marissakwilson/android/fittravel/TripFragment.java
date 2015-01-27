@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ToggleButton;
 
-public class SettingsFragment extends Fragment {
+public class TripFragment extends Fragment {
 
-	private Setting mSetting;
+	private Trip mSetting;
 	private ToggleButton mDefaultToggle;
 	
 	
@@ -24,7 +24,7 @@ public class SettingsFragment extends Fragment {
 		View v = inflater.inflate(R.layout.fragment_settings,parent, false);
 		
 		mDefaultToggle=(ToggleButton)v.findViewById(R.id.setting_toggle);
-		mDefaultToggle.
+
 		
 		return v;
 	}

@@ -2,14 +2,14 @@ package com.marissakwilson.android.fittravel;
 
 import java.util.UUID;
 
-public class Setting {
+public class Trip {
 
 	private String mTitle;
 	private boolean mDefault;
 	private UUID mUUID;
 	
 
-	public Setting(){
+	public Trip(){
 		mUUID = UUID.randomUUID();
 	}
 

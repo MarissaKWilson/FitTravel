@@ -4,8 +4,14 @@
     <string name="app_name">FitTravel</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<string name="settings_label">Settings</string>
-
+	<string name="settings_title_label">Settings</string>
+	<string name="measurement_title_label">Prefer Metric?</string>
+	<string name="fitbit_title_label">Your Fitbit</string>
+	<string name="fitbit_link_label">Connect your Fitbit</string>
+	<string name="fitbit_sync_button">Sync now</string>
+	<string name="change_starting_local">Change starting location</string>
+	<string name="change_ending_local">Change ending location</string>
+	<string name="new_trip_button">New trip</string>
     
     
 </resources>

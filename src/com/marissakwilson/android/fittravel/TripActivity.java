@@ -3,6 +3,7 @@ package com.marissakwilson.android.fittravel;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,12 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class SettingsActivity extends ActionBarActivity {
+public class TripActivity extends FragmentActivity {
 
+	Trip mTrip;
+	
 	@Override
-	protected void onCreate(Bundle savedInstanceState){
+	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_settings);
+		setContentView(R.layout.activity_trip);
 	}
 	
 //	@Override
