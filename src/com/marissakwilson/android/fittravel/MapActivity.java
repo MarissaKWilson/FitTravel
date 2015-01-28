@@ -35,11 +35,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.map_activity);
-		
+		setContentView(R.layout.map_activity);		
+			
 		mTrip = new Trip();
-		
-		
 		
 		 mMapFragment = MapFragment.newInstance();
 		 FragmentTransaction fragmentTransaction =
@@ -59,9 +57,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	@Override
 	public void onMapReady(GoogleMap googleMap) {
 		googleMap.setMyLocationEnabled(true);
-		googleMap.addMarker(new MarkerOptions().position(
-				new LatLng(0,0)).title("Marker"));
-		
+//		googleMap.addMarker(new MarkerOptions().position(
+//				mTrip.getLocationA()).title("Marker"));
+//		
 	}
 	
 	protected synchronized void buildGoogleApiClient() {
@@ -84,14 +82,15 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	    mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
         if (mLastLocation != null) {
-        	mTrip.setLocationA(new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude()));
+        	mTrip.setLocationA(mLastLocation);
+        	
         	
         }
-        else{
-        	mTrip.setLocationA(new LatLng(0,0));
-        }
+//        else{
+//        	mTrip.setLocationA(new Location(TAG));
+//        }
         
-        System.out.println(mTrip.getLocationA().toString());
+//       System.out.println(mTrip.getLocationA().toString());
 	}
 
 	@Override

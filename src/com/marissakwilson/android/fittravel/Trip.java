@@ -2,6 +2,8 @@ package com.marissakwilson.android.fittravel;
 
 import java.util.UUID;
 
+import android.location.Location;
+
 import com.google.android.gms.maps.model.LatLng;
 
 public class Trip {
@@ -25,9 +27,12 @@ public class Trip {
 	public LatLng getLocationA() {
 		return mLocationA;
 	}
+	
 
-	public void setLocationA(LatLng locationA) {
-		mLocationA = locationA;
+	public void setLocationA(Location lastLocation) {
+		
+		mLocationA = new LatLng((int)lastLocation.getLatitude(), (int)lastLocation.getLongitude());
+//		System.out.println((int)lastLocation.getLatitude() + " + " + (int)lastLocation.getLongitude());
 	}
 
 	public LatLng getLocationB() {
