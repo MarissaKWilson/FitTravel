@@ -15,6 +15,8 @@ import android.os.Build;
 public class TripActivity extends FragmentActivity {
 
 	Trip mTrip;
+	User mUser;
+	private final double KM_IN_MILE =1.60934;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -49,6 +51,19 @@ public class TripActivity extends FragmentActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	
+	public int convertMetric(double distance){
+		if(mTrip.isMetric()){
+			return (int) (distance*KM_IN_MILE);
+		}
+		else{
+			return (int) distance;
+		}
+	}
+	
+	public int convertToSteps(double distance){
+		return (int) (distance*mUser.getStrideLength());
 	}
 
 	/**

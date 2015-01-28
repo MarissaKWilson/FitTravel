@@ -2,16 +2,42 @@ package com.marissakwilson.android.fittravel;
 
 import java.util.UUID;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Trip {
 
 	private String mTitle;
-	private boolean mDefault;
+	private boolean mMetric=true;
 	private UUID mUUID;
+	private LatLng mLocationA;
+	private LatLng mLocationB;
+	private long mCurrentDistance;
+	private long mTotalDistance;
+	 
+	
 	
 
 	public Trip(){
 		mUUID = UUID.randomUUID();
 	}
+
+	
+	public LatLng getLocationA() {
+		return mLocationA;
+	}
+
+	public void setLocationA(LatLng locationA) {
+		mLocationA = locationA;
+	}
+
+	public LatLng getLocationB() {
+		return mLocationB;
+	}
+
+	public void setLocationB(LatLng locationB) {
+		mLocationB = locationB;
+	}
+	
 
 	@Override
 	public String toString(){
@@ -26,16 +52,32 @@ public class Trip {
 		mTitle = title;
 	}
 
-	public boolean isDefault() {
-		return mDefault;
+	public boolean isMetric() {
+		return mMetric;
 	}
 
-	public void setDefault(boolean default1) {
-		mDefault = default1;
+	public void setMetric(boolean isMetric) {
+		mMetric = isMetric;
 	}
 	
 	public UUID getUUID() {
 		return mUUID;
+	}
+
+	public long getTotalDistance() {
+		return mTotalDistance;
+	}
+
+	public void setTotalDistance(long totalDistance) {
+		mTotalDistance = totalDistance;
+	}
+
+	public long getCurrentDistance() {
+		return mCurrentDistance;
+	}
+
+	public void setCurrentDistance(long currentDistance) {
+		mCurrentDistance = currentDistance;
 	}
 	
 }
