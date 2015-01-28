@@ -6,12 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ToggleButton;
 
 public class TripFragment extends Fragment {
 
 	private Trip mSetting;
 	private ToggleButton mDefaultToggle;
+	private boolean metric;
+	private CheckBox mMetricCheck;
 	
 	
 	@Override
@@ -21,10 +24,9 @@ public class TripFragment extends Fragment {
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
 			Bundle savedInstanceState){
-		View v = inflater.inflate(R.layout.fragment_settings,parent, false);
+		View v = inflater.inflate(R.layout.activity_trip,parent, false);
 		
-		mDefaultToggle=(ToggleButton)v.findViewById(R.id.setting_toggle);
-
+		mMetricCheck = (CheckBox)v.findViewById(R.id.metric_checkbox);
 		
 		return v;
 	}

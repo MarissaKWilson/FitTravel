@@ -2085,13 +2085,18 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0c0042;
         public static final int action_mode_bar_stub=0x7f0c0041;
         public static final int action_mode_close_button=0x7f0c0034;
-        public static final int action_settings=0x7f0c0057;
+        public static final int action_settings=0x7f0c005e;
         public static final int activity_chooser_view_content=0x7f0c0035;
         public static final int adjust_height=0x7f0c0009;
         public static final int adjust_width=0x7f0c000a;
         public static final int always=0x7f0c0028;
         public static final int beginning=0x7f0c002f;
         public static final int book_now=0x7f0c0019;
+        public static final int button_connect_fitbit=0x7f0c0056;
+        public static final int button_new_ending=0x7f0c0054;
+        public static final int button_new_starting=0x7f0c0053;
+        public static final int button_new_trip=0x7f0c0055;
+        public static final int button_sync=0x7f0c0057;
         public static final int buyButton=0x7f0c0015;
         public static final int buy_now=0x7f0c001a;
         public static final int buy_with_google=0x7f0c001b;
@@ -2119,9 +2124,11 @@ containing a value of this type.
         public static final int image=0x7f0c0037;
         public static final int listMode=0x7f0c0020;
         public static final int list_item=0x7f0c0039;
-        public static final int map=0x7f0c0056;
+        public static final int map=0x7f0c005c;
+        public static final int map_container=0x7f0c005b;
+        public static final int map_distance_progress=0x7f0c005d;
         public static final int match_parent=0x7f0c0017;
-        public static final int metric_checkbox=0x7f0c0053;
+        public static final int metric_checkbox=0x7f0c0058;
         public static final int middle=0x7f0c0031;
         public static final int monochrome=0x7f0c001f;
         public static final int never=0x7f0c002b;
@@ -2144,8 +2151,8 @@ containing a value of this type.
         public static final int search_src_text=0x7f0c004e;
         public static final int search_voice_btn=0x7f0c0052;
         public static final int selectionDetails=0x7f0c0016;
-        public static final int setting_title=0x7f0c0054;
-        public static final int setting_toggle=0x7f0c0055;
+        public static final int setting_title=0x7f0c0059;
+        public static final int setting_toggle=0x7f0c005a;
         public static final int shortcut=0x7f0c003e;
         public static final int showCustom=0x7f0c0024;
         public static final int showHome=0x7f0c0025;
@@ -2212,10 +2219,12 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
         public static final int activity_trip=0x7f030017;
-        public static final int fragment_measurement=0x7f030018;
-        public static final int fragment_settings=0x7f030019;
-        public static final int map_activity=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int fragment_edit_trip=0x7f030018;
+        public static final int fragment_fitbit=0x7f030019;
+        public static final int fragment_measurement=0x7f03001a;
+        public static final int fragment_settings=0x7f03001b;
+        public static final int map_activity=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int settings=0x7f0d0000;
@@ -2416,12 +2425,6 @@ containing a value of this type.
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
  API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f0600f0;
         /**  Application theme. 
