@@ -17,7 +17,7 @@
 	    android:id="@+id/map_distance_progress"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    
+	    android:gravity="bottom|center"
 	    />
 
 
