@@ -43,6 +43,9 @@ public class Trip {
 		mLocationB = locationB;
 	}
 	
+	public String toStringLocationA(){
+		return mLocationA.toString();
+	}
 
 	@Override
 	public String toString(){

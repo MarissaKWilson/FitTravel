@@ -9,9 +9,11 @@
 	<string name="fitbit_title_label">Your Fitbit</string>
 	<string name="fitbit_link_label">Connect your Fitbit</string>
 	<string name="fitbit_sync_button">Sync now</string>
-	<string name="change_starting_local">Change starting location</string>
-	<string name="change_ending_local">Change ending location</string>
+	<string name="change_starting">Change starting location</string>
+	<string name="change_ending">Change ending location</string>
 	<string name="new_trip_button">New trip</string>
-    
+	<string name="new_trip_title">Create your trip</string>
+	<string name="new_location_title">Enter new location</string>
+    <string name="splash_title">FitTravel</string>
     
 </resources>

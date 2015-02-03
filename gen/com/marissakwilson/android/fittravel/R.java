@@ -2063,13 +2063,15 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f02004a;
         public static final int common_signin_btn_text_pressed_dark=0x7f02004b;
         public static final int common_signin_btn_text_pressed_light=0x7f02004c;
-        public static final int ic_launcher=0x7f02004d;
-        public static final int ic_plusone_medium_off_client=0x7f02004e;
-        public static final int ic_plusone_small_off_client=0x7f02004f;
-        public static final int ic_plusone_standard_off_client=0x7f020050;
-        public static final int ic_plusone_tall_off_client=0x7f020051;
-        public static final int powered_by_google_dark=0x7f020052;
-        public static final int powered_by_google_light=0x7f020053;
+        public static final int fitbit_logo_dark_1000px=0x7f02004d;
+        public static final int fitbit_logo_light_1000px=0x7f02004e;
+        public static final int ic_launcher=0x7f02004f;
+        public static final int ic_plusone_medium_off_client=0x7f020050;
+        public static final int ic_plusone_small_off_client=0x7f020051;
+        public static final int ic_plusone_standard_off_client=0x7f020052;
+        public static final int ic_plusone_tall_off_client=0x7f020053;
+        public static final int powered_by_google_dark=0x7f020054;
+        public static final int powered_by_google_light=0x7f020055;
     }
     public static final class id {
         public static final int action_bar=0x7f0c0045;
@@ -2092,9 +2094,9 @@ containing a value of this type.
         public static final int always=0x7f0c0028;
         public static final int beginning=0x7f0c002f;
         public static final int book_now=0x7f0c0019;
+        public static final int button_change_ending=0x7f0c0054;
+        public static final int button_change_starting=0x7f0c0053;
         public static final int button_connect_fitbit=0x7f0c0056;
-        public static final int button_new_ending=0x7f0c0054;
-        public static final int button_new_starting=0x7f0c0053;
         public static final int button_new_trip=0x7f0c0055;
         public static final int button_sync=0x7f0c0057;
         public static final int buyButton=0x7f0c0015;
@@ -2218,8 +2220,8 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030014;
         public static final int abc_search_view=0x7f030015;
         public static final int abc_simple_dropdown_hint=0x7f030016;
-        public static final int activity_trip=0x7f030017;
-        public static final int fragment_edit_trip=0x7f030018;
+        public static final int activity_splash=0x7f030017;
+        public static final int activity_trip=0x7f030018;
         public static final int fragment_fitbit=0x7f030019;
         public static final int fragment_measurement=0x7f03001a;
         public static final int fragment_settings=0x7f03001b;
@@ -2292,8 +2294,8 @@ containing a value of this type.
         public static final int accept=0x7f070002;
         public static final int action_settings=0x7f070035;
         public static final int app_name=0x7f070033;
-        public static final int change_ending_local=0x7f07003c;
-        public static final int change_starting_local=0x7f07003b;
+        public static final int change_ending=0x7f07003c;
+        public static final int change_starting=0x7f07003b;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f070009;
@@ -2401,8 +2403,11 @@ containing a value of this type.
         public static final int fitbit_title_label=0x7f070038;
         public static final int hello_world=0x7f070034;
         public static final int measurement_title_label=0x7f070037;
+        public static final int new_location_title=0x7f07003f;
         public static final int new_trip_button=0x7f07003d;
+        public static final int new_trip_title=0x7f07003e;
         public static final int settings_title_label=0x7f070036;
+        public static final int splash_title=0x7f070040;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
         /**  Text on a placeholder buy button when Google Play services is not
