@@ -14,8 +14,8 @@ import android.os.Build;
 
 public class TripActivity extends FragmentActivity {
 
-	Trip mTrip;
-	User mUser;
+	private Trip mTrip;
+	private FitBit mFitbit;
 	private final double KM_IN_MILE =1.60934;
 	
 	@Override
@@ -54,8 +54,8 @@ public class TripActivity extends FragmentActivity {
 	}
 	
 	public int convertMetric(double distance){
-		if(mTrip.isMetric()){
-			return (int) (distance*KM_IN_MILE);
+		if(mTrip.isMetric()!=true){
+			return (int) (distance/KM_IN_MILE);
 		}
 		else{
 			return (int) distance;
@@ -63,23 +63,7 @@ public class TripActivity extends FragmentActivity {
 	}
 	
 	public int convertToSteps(double distance){
-		return (int) (distance*mUser.getStrideLength());
+		return (int) (distance*mFitbit.getStrideLength());
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-//	public static class PlaceholderFragment extends Fragment {
-//
-//		public PlaceholderFragment() {
-//		}
-//
-//		@Override
-//		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//				Bundle savedInstanceState) {
-//			View rootView = inflater.inflate(R.layout.fragment_settings,
-//					container, false);
-//			return rootView;
-//		}
-//	}
 }

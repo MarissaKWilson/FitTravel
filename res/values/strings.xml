@@ -8,6 +8,7 @@
 	<string name="measurement_title_label">Prefer Metric?</string>
 	<string name="fitbit_title_label">Your Fitbit</string>
 	<string name="fitbit_link_label">Connect your Fitbit</string>
+	<string name="fitbit_clear_label">Remove Fitbit account from this app</string>
 	<string name="fitbit_sync_button">Sync now</string>
 	<string name="change_starting">Change starting location</string>
 	<string name="change_ending">Change ending location</string>
