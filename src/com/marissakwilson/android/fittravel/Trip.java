@@ -2,12 +2,19 @@ package com.marissakwilson.android.fittravel;
 
 import java.util.UUID;
 
-import android.location.Location;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.google.android.gms.maps.model.LatLng;
 
 public class Trip {
 
+	private static final String JSON_ID = "id";
+	private static final String JSON_LOCATIONA = "locationA";
+	private static final String JSON_LOCATIONB = "locationB";
+	private static final String JSON_CURRENTDISTANCE = "currentDistance";
+	private static final String JSON_TOTALDISTANCE = "totalDistance";
+	
 	private String mTitle;
 	private boolean mMetric=true;
 	private UUID mUUID;
@@ -87,6 +94,17 @@ public class Trip {
 
 	public void setCurrentDistance(double currentDistance) {
 		mCurrentDistance = currentDistance;
+	}
+
+
+	public JSONObject toJSON() throws JSONException {
+		JSONObject json = new JSONObject();
+		json.put(JSON_ID, mUUID.toString());
+		json.put(JSON_LOCATIONA, mLocationA.toString());
+		json.put(JSON_LOCATIONB, mLocationB.toString());
+		json.put(JSON_CURRENTDISTANCE, mCurrentDistance);
+		json.put(JSON_TOTALDISTANCE, mTotalDistance);
+		return null;
 	}
 	
 }

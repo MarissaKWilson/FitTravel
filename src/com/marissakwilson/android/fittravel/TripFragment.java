@@ -16,12 +16,17 @@ public class TripFragment extends Fragment {
 	private static final String DIALOG_START = "starting";
 	private static final String DIALOG_END = "ending";
 	
+	private static final String FILENAME = "tripData.json";
+	
+	
 	private Trip mTrip;
 	private ToggleButton mDefaultToggle;
 	private boolean metric;
 	private CheckBox mMetricCheck;
 	private Button mLocationA;
 	private Button mLocationB;
+	
+	
 	
 	
 	@Override
@@ -59,6 +64,7 @@ public class TripFragment extends Fragment {
 				dialog.show(fm, DIALOG_END);
 			}
 		});
+		
 		
 		return v;
 	}
