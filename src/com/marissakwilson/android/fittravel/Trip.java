@@ -13,8 +13,8 @@ public class Trip {
 	private UUID mUUID;
 	private LatLng mLocationA;
 	private LatLng mLocationB;
-	private long mCurrentDistance;
-	private long mTotalDistance;
+	private double mCurrentDistance;
+	private double mTotalDistance;
 	 
 	
 	
@@ -29,9 +29,9 @@ public class Trip {
 	}
 	
 
-	public void setLocationA(Location lastLocation) {
+	public void setLocationA(double lat, double lng) {
 		
-		mLocationA = new LatLng((int)lastLocation.getLatitude(), (int)lastLocation.getLongitude());
+		mLocationA = new LatLng(lat, lng);
 //		System.out.println((int)lastLocation.getLatitude() + " + " + (int)lastLocation.getLongitude());
 	}
 
@@ -39,8 +39,8 @@ public class Trip {
 		return mLocationB;
 	}
 
-	public void setLocationB(LatLng locationB) {
-		mLocationB = locationB;
+	public void setLocationB(double lat, double lng) {
+		mLocationB = new LatLng(lat, lng);
 	}
 	
 	public String toStringLocationA(){
@@ -72,19 +72,20 @@ public class Trip {
 		return mUUID;
 	}
 
-	public long getTotalDistance() {
+	public double getTotalDistance() {
 		return mTotalDistance;
 	}
 
-	public void setTotalDistance(long totalDistance) {
-		mTotalDistance = totalDistance;
+	public void setTotalDistance(float[] results) {
+		double tmp = results[0];
+		mTotalDistance = tmp;
 	}
 
-	public long getCurrentDistance() {
+	public double getCurrentDistance() {
 		return mCurrentDistance;
 	}
 
-	public void setCurrentDistance(long currentDistance) {
+	public void setCurrentDistance(double currentDistance) {
 		mCurrentDistance = currentDistance;
 	}
 	

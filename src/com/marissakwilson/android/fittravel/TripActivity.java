@@ -66,4 +66,6 @@ public class TripActivity extends FragmentActivity {
 		return (int) (distance*mFitbit.getStrideLength());
 	}
 
+	
+	
 }
