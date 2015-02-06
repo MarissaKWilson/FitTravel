@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.id.activity_main_view);
 		
+		
 		btnLogin = (Button) findViewById(R.id.button1);
 		
 		btnLogin.setOnClickListener(new OnClickListener() {

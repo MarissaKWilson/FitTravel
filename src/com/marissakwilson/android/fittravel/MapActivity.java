@@ -57,9 +57,10 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	@Override
 	public void onMapReady(GoogleMap googleMap) {
 		googleMap.setMyLocationEnabled(true);
-//		googleMap.addMarker(new MarkerOptions().position(
-//				mTrip.getLocationA()).title("Marker"));
-//		
+		getLastLocation();
+		googleMap.addMarker(new MarkerOptions().position(
+				mTrip.getLocationA()).title("Starting"));
+		
 	}
 	
 	protected synchronized void buildGoogleApiClient() {
@@ -76,21 +77,22 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		
 		
 	}
-
-	@Override
-	public void onConnected(Bundle connectionHint) {
-	    mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+	
+	public void getLastLocation(){
+		mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
                 mGoogleApiClient);
         if (mLastLocation != null) {
         	mTrip.setLocationA(mLastLocation);
-        	
-        	
         }
-//        else{
-//        	mTrip.setLocationA(new Location(TAG));
-//        }
-        
-//       System.out.println(mTrip.getLocationA().toString());
+        else{
+        	mTrip.setLocationA(new Location(TAG));
+        }
+       System.out.println(mTrip.getLocationA().toString());
+	}
+
+	@Override
+	public void onConnected(Bundle connectionHint) {
+	    getLastLocation();
 	}
 
 	@Override
