@@ -16,6 +16,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,8 +44,8 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		setContentView(R.layout.map_activity);		
 			
 		mTrip = new Trip();
-		mTrip.setLocationA(51.5, -0.1);
-		mTrip.setLocationB(40.7, -74.0);
+		mTrip.setLocationA(40.7, -74.0);
+		mTrip.setLocationB(51.5, -0.1);
 		float[] results = new float[1];
 		Location.distanceBetween(mTrip.getLocationA().latitude, mTrip.getLocationA().longitude,
                 mTrip.getLocationB().latitude, mTrip.getLocationB().longitude, results);
@@ -69,11 +71,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	@Override
 	public void onMapReady(GoogleMap googleMap) {
 		googleMap.setMyLocationEnabled(true);
-		if(mTrip.getLocationB()==null){
-			getLastLocation();
-			googleMap.addMarker(new MarkerOptions().position(
-					mTrip.getLocationA()).title("Starting"));
-		}else{
+//		if(mTrip.getLocationB()==null){
+//			getLastLocation();
+//			googleMap.addMarker(new MarkerOptions().position(
+//					mTrip.getLocationA()).title("Starting"));
+//		}else{
 			googleMap.addMarker(new MarkerOptions().position(mTrip.getLocationA()).title("Starting point"));
 			googleMap.addMarker(new MarkerOptions().position(mTrip.getLocationB()).title("Ending point"));
 			
@@ -92,7 +94,9 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		     .width(10)
 		     .color(Color.GREEN)
 		     .geodesic(true));
-		}
+			
+//			googleMap.moveCamera(new CameraUpdateFactory());
+//		}
 	}
 	
 	protected synchronized void buildGoogleApiClient() {
@@ -161,27 +165,6 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		
 		return progress;
 	}
-	
-	
-	
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// Handle action bar item clicks here. The action bar will
-//		// automatically handle clicks on the Home/Up button, so long
-//		// as you specify a parent activity in AndroidManifest.xml.
-//		int id = item.getItemId();
-//		if (id == R.id.action_settings) {
-//			return true;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
-	
+		
 
 }
