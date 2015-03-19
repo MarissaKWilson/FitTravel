@@ -22,7 +22,7 @@ public class FitBit{
 
 	//Temp values until OAuth is working
 	public FitBit() {
-		mDistance = 3012;
+		mDistance = 301200;
 		mUserMetric = true;
 		mStrideLength = 55;
 	}
