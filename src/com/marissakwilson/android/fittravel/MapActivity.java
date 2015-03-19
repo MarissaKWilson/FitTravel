@@ -147,19 +147,22 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 //		lng = lng*percentage;
 		
 
-	    double dLon = Math.toRadians(lngB - lngA);
+	    //double dLon = Math.toRadians(lngB - lngA);
 
 	    //convert to radians
 	    latA = Math.toRadians(latA);
 	    latB = Math.toRadians(latB);
 	    lngA = Math.toRadians(lngA);
+	    lngB = Math.toRadians(lngB);
 
-	    double Bx = Math.cos(latB) * Math.cos(dLon);
-	    double By = Math.cos(latB) * Math.sin(dLon);
-	    double lat3 = Math.atan2(Math.sin(latA) + Math.sin(latB), 
-	    		Math.sqrt((Math.cos(latA) + Bx) * (Math.cos(latA) + Bx) + By * By));
-	    double lng3 = lngA + Math.atan2(By, Math.cos(latA) + Bx);
+	    //double Bx = Math.cos(latB) * Math.cos(dLon);
+	    //double By = Math.cos(latB) * Math.sin(dLon);
+	    //double lat3 = Math.atan2(Math.sin(latA) + Math.sin(latB), 
+	    		//Math.sqrt((Math.cos(latA) + Bx) * (Math.cos(latA) + Bx) + By * By));
+	    //double lng3 = lngA + Math.atan2(By, Math.cos(latA) + Bx);
 
+	    double lat3 = latA + (latB - latA) * percentage;
+	    double lng3 = lngA + Math.acos(Math.tan(latA) / Math.tan(lat3));
 	    
 		LatLng progress = new LatLng(Math.toDegrees(lat3), Math.toDegrees(lng3));
 		

@@ -39,7 +39,6 @@ public class Trip {
 	public void setLocationA(double lat, double lng) {
 		
 		mLocationA = new LatLng(lat, lng);
-//		System.out.println((int)lastLocation.getLatitude() + " + " + (int)lastLocation.getLongitude());
 	}
 
 	public LatLng getLocationB() {
