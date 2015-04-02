@@ -15,6 +15,8 @@
 	<string name="new_trip_button">New trip</string>
 	<string name="new_trip_title">Create your trip</string>
 	<string name="new_location_title">Enter new location</string>
+	<string name="trip_start_hint">Enter starting location</string>
+	<string name="trip_end_hint">Enter ending location</string>
     <string name="splash_title">FitTravel</string>
     
 </resources>

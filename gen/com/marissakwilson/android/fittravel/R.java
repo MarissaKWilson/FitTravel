@@ -2098,12 +2098,9 @@ containing a value of this type.
         public static final int beginning=0x7f0c002f;
         public static final int book_now=0x7f0c0019;
         public static final int button1=0x7f0c0062;
-        public static final int button_change_ending=0x7f0c0058;
-        public static final int button_change_starting=0x7f0c0057;
         public static final int button_clear_fitbit=0x7f0c0056;
         public static final int button_connect_fitbit=0x7f0c0054;
-        public static final int button_new_trip=0x7f0c0059;
-        public static final int button_sync=0x7f0c005a;
+        public static final int button_sync=0x7f0c0058;
         public static final int buyButton=0x7f0c0015;
         public static final int buy_now=0x7f0c001a;
         public static final int buy_with_google=0x7f0c001b;
@@ -2120,6 +2117,7 @@ containing a value of this type.
         public static final int end=0x7f0c0030;
         public static final int expand_activities_button=0x7f0c0036;
         public static final int expanded_menu=0x7f0c003c;
+        public static final int fragmentContainer=0x7f0c0057;
         public static final int grayscale=0x7f0c001e;
         public static final int holo_dark=0x7f0c0010;
         public static final int holo_light=0x7f0c0011;
@@ -2135,7 +2133,7 @@ containing a value of this type.
         public static final int map_container=0x7f0c005e;
         public static final int map_distance_progress=0x7f0c0060;
         public static final int match_parent=0x7f0c0017;
-        public static final int metric_checkbox=0x7f0c005b;
+        public static final int metric_checkbox=0x7f0c0059;
         public static final int middle=0x7f0c0031;
         public static final int monochrome=0x7f0c001f;
         public static final int never=0x7f0c002b;
@@ -2158,8 +2156,8 @@ containing a value of this type.
         public static final int search_src_text=0x7f0c004e;
         public static final int search_voice_btn=0x7f0c0052;
         public static final int selectionDetails=0x7f0c0016;
-        public static final int setting_title=0x7f0c005c;
-        public static final int setting_toggle=0x7f0c005d;
+        public static final int setting_title=0x7f0c005a;
+        public static final int setting_toggle=0x7f0c005b;
         public static final int shortcut=0x7f0c003e;
         public static final int showCustom=0x7f0c0024;
         public static final int showHome=0x7f0c0025;
@@ -2171,6 +2169,8 @@ containing a value of this type.
         public static final int tabMode=0x7f0c0021;
         public static final int terrain=0x7f0c000f;
         public static final int title=0x7f0c003b;
+        public static final int trip_ending_string=0x7f0c005d;
+        public static final int trip_starting_string=0x7f0c005c;
         public static final int up=0x7f0c0001;
         public static final int useLogo=0x7f0c0027;
         public static final int webview1=0x7f0c0053;
@@ -2235,8 +2235,9 @@ containing a value of this type.
         public static final int fragment_fitbit=0x7f03001c;
         public static final int fragment_measurement=0x7f03001d;
         public static final int fragment_settings=0x7f03001e;
-        public static final int map_activity=0x7f03001f;
-        public static final int support_simple_spinner_dropdown_item=0x7f030020;
+        public static final int fragment_trip=0x7f03001f;
+        public static final int map_activity=0x7f030020;
+        public static final int support_simple_spinner_dropdown_item=0x7f030021;
     }
     public static final class menu {
         public static final int settings=0x7f0d0000;
@@ -2418,9 +2419,11 @@ containing a value of this type.
         public static final int new_trip_button=0x7f07003e;
         public static final int new_trip_title=0x7f07003f;
         public static final int settings_title_label=0x7f070036;
-        public static final int splash_title=0x7f070041;
+        public static final int splash_title=0x7f070043;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
+        public static final int trip_end_hint=0x7f070042;
+        public static final int trip_start_hint=0x7f070041;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

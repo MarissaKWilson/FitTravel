@@ -3,13 +3,12 @@ package com.marissakwilson.android.fittravel;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ToggleButton;
+import android.widget.EditText;
 
 public class TripFragment extends Fragment {
 
@@ -20,52 +19,50 @@ public class TripFragment extends Fragment {
 	
 	
 	private Trip mTrip;
-	private ToggleButton mDefaultToggle;
-	private boolean metric;
-	private CheckBox mMetricCheck;
-	private Button mLocationA;
-	private Button mLocationB;
-	
-	
-	
+	private EditText mStartingLocalField;
+	private EditText mEndingLocalField;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
+		mTrip = new Trip();
 	}
 	
-	public View onCreateView(LayoutInflater inflater, ViewGroup parent,
-			Bundle savedInstanceState){
-		View v = inflater.inflate(R.layout.activity_trip,parent, false);
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState){
+		View v = inflater.inflate(R.layout.fragment_trip, parent, false);
 		
-		mMetricCheck = (CheckBox)v.findViewById(R.id.metric_checkbox);
-		mMetricCheck.setOnClickListener(new View.OnClickListener(){
-			public void onClick(View v){
-				//Fill in functionality
+		mStartingLocalField = (EditText)v.findViewById(R.id.trip_starting_string);
+		mStartingLocalField.addTextChangedListener(new TextWatcher(){
+			public void onTextChanged(CharSequence c, int start, int before, int count){
+				mTrip.setstrLocA(c.toString());
+			}
+			
+			public void beforeTextChanged(CharSequence c, int start, int count, int after){
+				//intentionally left blank
+			}
+			
+			public void afterTextChanged(Editable c){
+				//intentionally left blank
 			}
 		});
 		
-		mLocationA = (Button)v.findViewById(R.id.button_change_starting);
-		mLocationA.setText(mTrip.getLocationA().toString());
-		mLocationA.setOnClickListener(new View.OnClickListener(){
-			public void onClick(View v){
-				FragmentManager fm = getActivity().getSupportFragmentManager();
-				LocationPickerFragment dialog = new LocationPickerFragment();
-				dialog.show(fm, DIALOG_START);
+		mEndingLocalField = (EditText)v.findViewById(R.id.trip_ending_string);
+		mEndingLocalField.addTextChangedListener(new TextWatcher(){
+			public void onTextChanged(CharSequence c, int start, int before, int count){
+				mTrip.setstrLocB(c.toString());
+			}
+			
+			public void beforeTextChanged(CharSequence c, int start, int count, int after){
+				//intentionally left blank
+			}
+			
+			public void afterTextChanged(Editable c){
+				//intentionally left blank
 			}
 		});
-		
-		mLocationB = (Button)v.findViewById(R.id.button_change_ending);
-		mLocationB.setText(mTrip.getLocationB().toString());
-		mLocationB.setOnClickListener(new View.OnClickListener(){
-			public void onClick(View v){
-				FragmentManager fm = getActivity().getSupportFragmentManager();
-				LocationPickerFragment dialog = new LocationPickerFragment();
-				dialog.show(fm, DIALOG_END);
-			}
-		});
-		
 		
 		return v;
 	}
+	
 }

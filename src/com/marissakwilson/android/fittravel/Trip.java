@@ -20,15 +20,41 @@ public class Trip {
 	private UUID mUUID;
 	private LatLng mLocationA;
 	private LatLng mLocationB;
+	private String mstrLocA;
+	private String mstrLocB;
+
 	private double mCurrentDistance;
 	private double mTotalDistance;
+	
+	public Trip(){
+		mUUID = UUID.randomUUID();
+	}
+	
+	public String getstrLocA() {
+		return mstrLocA;
+	}
+
+
+	public void setstrLocA(String mstrLocA) {
+		this.mstrLocA = mstrLocA;
+	}
+
+
+	public String getstrLocB() {
+		return mstrLocB;
+	}
+
+
+	public void setstrLocB(String mstrLocB) {
+		this.mstrLocB = mstrLocB;
+	}
+
+
 	 
 	
 	
 
-	public Trip(){
-		mUUID = UUID.randomUUID();
-	}
+	
 
 	
 	public LatLng getLocationA() {

@@ -1,16 +1,10 @@
 package com.marissakwilson.android.fittravel;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
+import android.support.v4.app.FragmentManager;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 
 public class TripActivity extends FragmentActivity {
 
@@ -22,24 +16,26 @@ public class TripActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_trip);
+		
+		FragmentManager fm = getSupportFragmentManager();
+		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
+		
+		if(fragment == null){
+			fragment = new TripFragment();
+			fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
+		}
 	}
 	
-//	@Override
-//	protected void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		setContentView(R.layout.activity_settings);
-////		if (savedInstanceState == null) {
-////			getSupportFragmentManager().beginTransaction()
-////					.add(R.id.container, new PlaceholderFragment()).commit();
-////		}
-//	}
+	
+	
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.settings, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		// Inflate the menu; this adds items to the action bar if it is present.
+//		getMenuInflater().inflate(R.menu.settings, menu);
+//		return true;
+//	}
+	
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

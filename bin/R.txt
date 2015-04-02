@@ -456,12 +456,9 @@ int id always 0x7f0c0028
 int id beginning 0x7f0c002f
 int id book_now 0x7f0c0019
 int id button1 0x7f0c0062
-int id button_change_ending 0x7f0c0058
-int id button_change_starting 0x7f0c0057
 int id button_clear_fitbit 0x7f0c0056
 int id button_connect_fitbit 0x7f0c0054
-int id button_new_trip 0x7f0c0059
-int id button_sync 0x7f0c005a
+int id button_sync 0x7f0c0058
 int id buyButton 0x7f0c0015
 int id buy_now 0x7f0c001a
 int id buy_with_google 0x7f0c001b
@@ -478,6 +475,7 @@ int id edit_query 0x7f0c0047
 int id end 0x7f0c0030
 int id expand_activities_button 0x7f0c0036
 int id expanded_menu 0x7f0c003c
+int id fragmentContainer 0x7f0c0057
 int id grayscale 0x7f0c001e
 int id holo_dark 0x7f0c0010
 int id holo_light 0x7f0c0011
@@ -493,7 +491,7 @@ int id map 0x7f0c005f
 int id map_container 0x7f0c005e
 int id map_distance_progress 0x7f0c0060
 int id match_parent 0x7f0c0017
-int id metric_checkbox 0x7f0c005b
+int id metric_checkbox 0x7f0c0059
 int id middle 0x7f0c0031
 int id monochrome 0x7f0c001f
 int id never 0x7f0c002b
@@ -516,8 +514,8 @@ int id search_plate 0x7f0c004d
 int id search_src_text 0x7f0c004e
 int id search_voice_btn 0x7f0c0052
 int id selectionDetails 0x7f0c0016
-int id setting_title 0x7f0c005c
-int id setting_toggle 0x7f0c005d
+int id setting_title 0x7f0c005a
+int id setting_toggle 0x7f0c005b
 int id shortcut 0x7f0c003e
 int id showCustom 0x7f0c0024
 int id showHome 0x7f0c0025
@@ -529,6 +527,8 @@ int id sync_fitbit 0x7f0c0055
 int id tabMode 0x7f0c0021
 int id terrain 0x7f0c000f
 int id title 0x7f0c003b
+int id trip_ending_string 0x7f0c005d
+int id trip_starting_string 0x7f0c005c
 int id up 0x7f0c0001
 int id useLogo 0x7f0c0027
 int id webview1 0x7f0c0053
@@ -567,8 +567,9 @@ int layout activity_trip 0x7f03001b
 int layout fragment_fitbit 0x7f03001c
 int layout fragment_measurement 0x7f03001d
 int layout fragment_settings 0x7f03001e
-int layout map_activity 0x7f03001f
-int layout support_simple_spinner_dropdown_item 0x7f030020
+int layout fragment_trip 0x7f03001f
+int layout map_activity 0x7f030020
+int layout support_simple_spinner_dropdown_item 0x7f030021
 int menu settings 0x7f0d0000
 int raw gtm_analytics 0x7f050000
 int string abc_action_bar_home_description 0x7f070024
@@ -633,9 +634,11 @@ int string new_location_title 0x7f070040
 int string new_trip_button 0x7f07003e
 int string new_trip_title 0x7f07003f
 int string settings_title_label 0x7f070036
-int string splash_title 0x7f070041
+int string splash_title 0x7f070043
 int string store_picture_message 0x7f070001
 int string store_picture_title 0x7f070000
+int string trip_end_hint 0x7f070042
+int string trip_start_hint 0x7f070041
 int string wallet_buy_button_place_holder 0x7f070022
 int style AppBaseTheme 0x7f0600f0
 int style AppTheme 0x7f0600f1
