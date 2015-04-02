@@ -8,6 +8,9 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 
 public class TripFragment extends Fragment {
@@ -21,6 +24,7 @@ public class TripFragment extends Fragment {
 	private Trip mTrip;
 	private EditText mStartingLocalField;
 	private EditText mEndingLocalField;
+	private CheckBox mMetricCheck;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -59,6 +63,14 @@ public class TripFragment extends Fragment {
 			
 			public void afterTextChanged(Editable c){
 				//intentionally left blank
+			}
+			
+		});
+		
+		mMetricCheck = (CheckBox)v.findViewById(R.id.metric_checkbox);
+		mMetricCheck.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+				mTrip.setMetric(isChecked);
 			}
 		});
 		

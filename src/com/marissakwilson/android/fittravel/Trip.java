@@ -1,5 +1,6 @@
 package com.marissakwilson.android.fittravel;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 import org.json.JSONException;
@@ -7,8 +8,10 @@ import org.json.JSONObject;
 
 import com.google.android.gms.maps.model.LatLng;
 
-public class Trip {
+public class Trip implements Serializable{
 
+	
+	private static final long serialVersionUID = 4840490339660604225L;
 	private static final String JSON_ID = "id";
 	private static final String JSON_LOCATIONA = "locationA";
 	private static final String JSON_LOCATIONB = "locationB";
@@ -16,18 +19,17 @@ public class Trip {
 	private static final String JSON_TOTALDISTANCE = "totalDistance";
 	
 	private String mTitle;
-	private boolean mMetric=true;
-	private UUID mUUID;
-	private LatLng mLocationA;
-	private LatLng mLocationB;
-	private String mstrLocA;
-	private String mstrLocB;
+	protected boolean mMetric;
+	protected LatLng mLocationA;
+	protected LatLng mLocationB;
+	protected String mstrLocA;
+	protected String mstrLocB;
 
-	private double mCurrentDistance;
-	private double mTotalDistance;
+	protected double mCurrentDistance;
+	protected double mTotalDistance;
 	
 	public Trip(){
-		mUUID = UUID.randomUUID();
+		mMetric=true;
 	}
 	
 	public String getstrLocA() {
@@ -48,13 +50,6 @@ public class Trip {
 	public void setstrLocB(String mstrLocB) {
 		this.mstrLocB = mstrLocB;
 	}
-
-
-	 
-	
-	
-
-	
 
 	
 	public LatLng getLocationA() {
@@ -99,10 +94,7 @@ public class Trip {
 	public void setMetric(boolean isMetric) {
 		mMetric = isMetric;
 	}
-	
-	public UUID getUUID() {
-		return mUUID;
-	}
+
 
 	public double getTotalDistance() {
 		return mTotalDistance;
@@ -124,7 +116,6 @@ public class Trip {
 
 	public JSONObject toJSON() throws JSONException {
 		JSONObject json = new JSONObject();
-		json.put(JSON_ID, mUUID.toString());
 		json.put(JSON_LOCATIONA, mLocationA.toString());
 		json.put(JSON_LOCATIONB, mLocationB.toString());
 		json.put(JSON_CURRENTDISTANCE, mCurrentDistance);
