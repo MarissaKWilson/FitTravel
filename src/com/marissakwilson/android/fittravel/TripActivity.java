@@ -21,7 +21,7 @@ public class TripActivity extends FragmentActivity {
 		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
 		
 		if(fragment == null){
-			fragment = new TripFragment();
+			fragment = new TripController();
 			fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
 		}
 	}
