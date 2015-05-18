@@ -17,13 +17,6 @@ public class TripActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_trip);
 		
-		FragmentManager fm = getSupportFragmentManager();
-		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
-		
-		if(fragment == null){
-			fragment = new TripController();
-			fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
-		}
 	}
 	
 	

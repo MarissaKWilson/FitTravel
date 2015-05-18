@@ -1,78 +1,72 @@
 package com.marissakwilson.android.fittravel;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
-public class MenuActivity extends FragmentActivity {
+public class MenuActivity extends FragmentActivity{
+		FragmentManager fm;
+		FragmentTransaction ft;
 	
-	@Override
-	public void onCreate(Bundle savedInstanceState){
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_menu);
-		
-		if(findViewById(R.id.fragment_container) !=null ){			
-			//If being restored from previous state we don't need to do anything
-			if(savedInstanceState != null){
-				return;
-			}
-		
-		//	NewTripFragment blankTrip = new NewTripFragment();
-			getSupportFragmentManager().beginTransaction()
-			.add(R.id.fitbitcontainer, new NewTripFragment()).commit();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_basic);
+        
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        if(savedInstanceState != null){
+        	return;
+        }
+        NewFitbitFragment newFitbit = new NewFitbitFragment();
+        newFitbit.setArguments(getIntent().getExtras());
+        ft.add(R.id.fitbitcontainer, newFitbit);
+        
+        NewTripFragment newTrip = new NewTripFragment();
+        newTrip.setArguments(getIntent().getExtras());
+        ft.add(R.id.tripcontainer, newTrip);
+        
+        MetricFragment metric = new MetricFragment();
+        metric.setArguments(getIntent().getExtras());
+        ft.add(R.id.metriccontainer, metric);
+        
+        ft.commit();
+        
+        replaceFragments();
+        
+    }
+    
+    public void replaceFragments(){
+    	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+    	FileHandler fh = new FileHandler(this.getApplicationContext());
+    	
+    	Trip t = new Trip();
+    	t.setLocationA(42.36, -71.05);
+    	t.setLocationB(48.85, 2.35);
+    	t.setTotalDistance();
+    	t.setCurrentDistance(205);
+    	
+    	fh.writeTrip(t);
+    	
+    	Trip r = fh.readTrip();
+    	
+    	String text1 = "Your trip from " + r.locBToString() + " to " + r.locAToString() + ".";
+    	String text2 = "So far " + r.getCurrentDistance() + "/" + r.getTotalDistance();
+    	
+    	TripFragment trip = new TripFragment();
+    	trip.setText(text1, text2);
+    	
+    	transaction.replace(R.id.fitbitcontainer, trip);
+    	transaction.commit();
+    	//if(FileHandler.nullTrip == false){
+    	//	Trip t = FileHandler.readTrip();
+    	//	transaction.replace(R.id.fragment_container, TripFragment);
+    }
+    
 
-			
-//	
-//			final ListView listview = (ListView) findViewById(R.id.listview_activity);
-//		    String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-//		        "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-//		        "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-//		        "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-//		        "Android", "iPhone", "WindowsMobile" };
-//
-//		    final ArrayList<String> list = new ArrayList<String>();
-//		    for (int i = 0; i < values.length; ++i) {
-//		      list.add(values[i]);
-//		    }
-//		    final StableArrayAdapter adapter = new StableArrayAdapter(this,
-//		        android.R.layout.simple_list_item_1, list);
-//		    listview.setAdapter(adapter);
-//
-//		    listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//
-//		      @Override
-//		      public void onItemClick(AdapterView<?> parent, final View view,
-//		          int position, long id) {
-//		        final String item = (String) parent.getItemAtPosition(position);
-//		        view.animate().setDuration(2000).alpha(0)
-//		            .withEndAction(new Runnable() {
-//		              @Override
-//		              public void run() {
-//		                list.remove(item);
-//		                adapter.notifyDataSetChanged();
-//		                view.setAlpha(1);
-//		              }
-//		            });
-//		      }
-//
-//		    });
-//		  }
-
-		  
-
-		
-			
-			
-
-
-		}
-	}
+	
 }

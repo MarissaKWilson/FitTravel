@@ -468,6 +468,7 @@ containing a value of this type.
         public static final int powered_by_google_light=0x7f020024;
     }
     public static final class id {
+        public static final int action_settings=0x7f0a002e;
         public static final int activity_main_view=0x7f0a002c;
         public static final int adjust_height=0x7f0a0001;
         public static final int adjust_width=0x7f0a0002;
@@ -532,6 +533,9 @@ containing a value of this type.
         public static final int fragment_settings=0x7f03000a;
         public static final int fragment_trip=0x7f03000b;
         public static final int map_activity=0x7f03000c;
+    }
+    public static final class menu {
+        public static final int menu_activity_actions=0x7f0b0000;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f040000;

@@ -101,6 +101,7 @@ int drawable ic_plusone_tall_off_client 0x7f020021
 int drawable ic_walk 0x7f020022
 int drawable powered_by_google_dark 0x7f020023
 int drawable powered_by_google_light 0x7f020024
+int id action_settings 0x7f0a002e
 int id activity_main_view 0x7f0a002c
 int id adjust_height 0x7f0a0001
 int id adjust_width 0x7f0a0002
@@ -161,6 +162,7 @@ int layout fragment_new_fitbit 0x7f030009
 int layout fragment_settings 0x7f03000a
 int layout fragment_trip 0x7f03000b
 int layout map_activity 0x7f03000c
+int menu menu_activity_actions 0x7f0b0000
 int raw gtm_analytics 0x7f040000
 int string accept 0x7f060002
 int string action_settings 0x7f060025

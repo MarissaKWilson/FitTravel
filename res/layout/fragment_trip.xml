@@ -15,7 +15,6 @@
         android:layout_alignParentRight="true"
         android:ellipsize="marquee"
         android:singleLine="true"
-        android:text="12546/12902385 steps, 64% there!"
         android:textSize="12sp" />
 
     <TextView
@@ -27,7 +26,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
         android:gravity="center_vertical"
-        android:text="Your trip from London to New York City"
         android:textSize="16sp" />
 
 </RelativeLayout> 

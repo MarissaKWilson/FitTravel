@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,14 +47,14 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.map_activity);		
 			
-		mTrip = new Trip();
-		mTrip.setLocationA(40.7, -74.0);
-		mTrip.setLocationB(51.5, -0.1);
-		float[] results = new float[1];
-		Location.distanceBetween(mTrip.getLocationA().latitude, mTrip.getLocationA().longitude,
-                mTrip.getLocationB().latitude, mTrip.getLocationB().longitude, results);
-		mTrip.setTotalDistance(results);
-		mTrip.setCurrentDistance(4750000);
+//		mTrip = new Trip();
+//		mTrip.setLocationA(40.7, -74.0);
+//		mTrip.setLocationB(51.5, -0.1);
+//		float[] results = new float[1];
+//		Location.distanceBetween(mTrip.getLocationA().latitude, mTrip.getLocationA().longitude,
+//                mTrip.getLocationB().latitude, mTrip.getLocationB().longitude, results);
+//		mTrip.setTotalDistance(results);
+//		mTrip.setCurrentDistance(4750000);
 		
 		
 		 mMapFragment = MapFragment.newInstance();
@@ -79,21 +80,26 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 //			googleMap.addMarker(new MarkerOptions().position(
 //					mTrip.getLocationA()).title("Starting"));
 //		}else{
-			googleMap.addMarker(new MarkerOptions().position(mTrip.getLocationA()).title("Starting point"));
-			googleMap.addMarker(new MarkerOptions().position(mTrip.getLocationB()).title("Ending point"));
+			double[] mLocationA=mTrip.getLocationA();
+			double[] mLocationB=mTrip.getLocationB();
+			LatLng locationA = new LatLng(mLocationA[0], mLocationA[1]);
+			LatLng locationB = new LatLng(mLocationB[0], mLocationB[1]);
+			
+			googleMap.addMarker(new MarkerOptions().position(locationA).title("Starting point"));
+			googleMap.addMarker(new MarkerOptions().position(locationB).title("Ending point"));
 			
 			LatLng midPoint = getProgress();
 //			googleMap.addMarker(new MarkerOptions().position(midPoint)
 //					.icon(BitmapDescriptorFactory.fromFile(drawable/ic_walk.png)));
 			
 			Polyline bottomLine = googleMap.addPolyline(new PolylineOptions()
-		     .add(mTrip.getLocationA(), mTrip.getLocationB())
+		     .add(locationA, locationB)
 		     .width(10)
 		     .color(Color.BLUE)
 		     .geodesic(true));
 			
 			Polyline topLine = googleMap.addPolyline(new PolylineOptions()
-		     .add(mTrip.getLocationA(), midPoint)
+		     .add(locationA, midPoint)
 		     .width(10)
 		     .color(Color.GREEN)
 		     .geodesic(true));
@@ -129,6 +135,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
        System.out.println(mTrip.getLocationA().toString());
 	}
 
+	
 	@Override
 	public void onConnected(Bundle connectionHint) {
 	    getLastLocation();
@@ -141,10 +148,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 	}
 	
 	public LatLng getProgress(){
-		double latA = mTrip.getLocationA().latitude;
-		double latB = mTrip.getLocationB().latitude;
-		double lngA = mTrip.getLocationA().longitude;
-		double lngB = mTrip.getLocationB().longitude;
+		double[] tmpA = mTrip.getLocationA();
+		double[] tmpB = mTrip.getLocationB();
+		double latA = tmpA[0];
+		double latB = tmpB[0];
+		double lngA = tmpA[1];
+		double lngB = tmpB[1];
 		double percentage = mTrip.getCurrentDistance()/mTrip.getTotalDistance();
 		
 	    //double dLon = Math.toRadians(lngB - lngA);
@@ -224,5 +233,24 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback,
 		return progress;
 	}
 		
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+//				TODO:Open basic activity                
+//            	openSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
