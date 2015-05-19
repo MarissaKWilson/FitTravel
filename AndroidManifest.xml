@@ -32,9 +32,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".OAuthActivity"
-            />
+        <activity android:name=".OAuthActivity" />
+        <activity android:name=".FitbitActivity" />
+        <activity android:name=".TripActivity" />
+        <activity android:name=".NewTripActivity"/>
+        <activity android:name=".MapActivity"/>
  		<dependency>
 	 	 <groupId>com.google.oauth-client</groupId>
 		  <artifactId>google-oauth-client</artifactId>

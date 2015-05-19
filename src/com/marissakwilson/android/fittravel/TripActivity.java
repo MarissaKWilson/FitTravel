@@ -1,10 +1,15 @@
 package com.marissakwilson.android.fittravel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class TripActivity extends FragmentActivity {
 
@@ -17,10 +22,33 @@ public class TripActivity extends FragmentActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_trip);
 		
+		FragmentManager fm = getSupportFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+		
+		TripDetailFragment tripDetail = new TripDetailFragment();
+		ft.add(R.id.trip_detail_container,tripDetail);
+		
+		ft.commit();
+		
+		Button newTrip = (Button) findViewById(R.id.new_trip_button);
+//		
+//		newTrip.setOnClickListener(new OnClickListener(){
+//			@Override
+//			public void onClick(View v) {
+//
+//				Intent i = new Intent(View.getRootView(), NewTripActivity.class);
+//		        startActivity(i);
+//				
+//			}
+//		});
+		
 	}
 	
 	
-	
+		public void beginNewTrip(View view){
+			Intent i =  new Intent(this, NewTripActivity.class);
+			startActivity(i);
+		}
 
 //	@Override
 //	public boolean onCreateOptionsMenu(Menu menu) {

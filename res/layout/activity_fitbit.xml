@@ -1,11 +1,39 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fitbit_info_container"
+        android:padding="16dp"
+        />
 
-    <WebView
-        android:id="@+id/webview1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fitbit_link_label"
+        android:id="@+id/button_connect_fitbit"
+        android:padding="16dp"
+        android:onClick="beginOAuth"
+        />
+    
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fitbit_sync_button"
+        android:id="@+id/sync_fitbit"
+        android:padding="16dp"
+        />
+    
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fitbit_clear_label"
+        android:id="@+id/button_clear_fitbit"
+        android:padding="8dp"
+        />
 
-</RelativeLayout>
+</LinearLayout>

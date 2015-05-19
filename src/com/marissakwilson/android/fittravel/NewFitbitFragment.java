@@ -9,8 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class NewFitbitFragment extends Fragment implements OnClickListener {
-
+public class NewFitbitFragment extends Fragment implements OnClickListener{
 	Button connect;
 	
 	@Override
@@ -24,10 +23,10 @@ public class NewFitbitFragment extends Fragment implements OnClickListener {
 	}
 
 	@Override
-	public void onClick(View arg0) {
-		Intent i = new Intent(getActivity(), OAuthActivity.class);
-        startActivity(i);
-        
-		
+    public void onClick(View view) {
+		Intent i = new Intent(getActivity().getApplicationContext(), FitbitActivity.class);
+        getActivity().startActivity(i);
 	}
+
+
 }
