@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fitbit_info_container"
+        android:padding="16dp"
+        />
 
     <Button 
         android:layout_width="match_parent"

@@ -4,23 +4,27 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
 
-public class OAuthActivity extends FragmentActivity{
+public class OAuthActivity extends FragmentActivity {
 
 	private static final String CLIENT_KEY = "be70df3c413b4154b72498c4e0f56936";
 	private static final String CLIENT_SECRET_KEY = "7d3b4bf3fae84867951f5c3f2c9d97e1";
 	
 	
-	private static final String FILENAME = "tripData.json";
-	private static final String JSON_ID = "id";
-	private static final String JSON_TITLE = "title";
-	private static final String JSON_SOLVED = "solved";
-	
+//	private static final String FILENAME = "tripData.json";
+//	private static final String JSON_ID = "id";
+//	private static final String JSON_TITLE = "title";
+//	private static final String JSON_SOLVED = "solved";
+//	
 	private Button mConnectFitbit;
 	private Button mSyncFitbit;
 	private Button mClearFitbit;
+	private FragmentManager fm;
+	private FragmentTransaction ft;
 	
 //	private OAuthManager oam;
 	
@@ -29,10 +33,26 @@ public class OAuthActivity extends FragmentActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_oauth);
 		
+		 ft = getSupportFragmentManager().beginTransaction();
+	        if(savedInstanceState != null){
+	        	return;
+	        }
+	        NewFitbitFragment newFitbit = new NewFitbitFragment();
+	        newFitbit.setArguments(getIntent().getExtras());
+	        ft.add(R.id.fitbitcontainer, newFitbit);
+	        
+	       
+	        Button connect = new Button(findViewById(R.id.button_connect_fitbit));
+	        //ft.add(R.id.tripcontainer, trip);
+	        
+	        MetricFragment metric = new MetricFragment();
+	        metric.setArguments(getIntent().getExtras());
+	        ft.add(R.id.metriccontainer, metric);
+	        
+	        ft.commit();
 		
 		mConnectFitbit = (Button)findViewById(R.id.button_connect_fitbit);
-		mConnectFitbit.setOnClickListener(new View.OnClickListener() {
-			
+		mConnectFitbit.setOnClickListener(new View.OnClickListener() {			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub

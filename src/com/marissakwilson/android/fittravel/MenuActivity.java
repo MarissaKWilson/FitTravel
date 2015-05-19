@@ -7,18 +7,20 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MenuActivity extends FragmentActivity{
 		FragmentManager fm;
 		FragmentTransaction ft;
+		NewFitbitFragment fitbit;
+		TripFragment trip;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_basic);
+        setContentView(R.layout.acitivty_menu);
         
-        fm = getSupportFragmentManager();
-        ft = fm.beginTransaction();
+        ft = getSupportFragmentManager().beginTransaction();
         if(savedInstanceState != null){
         	return;
         }
@@ -26,9 +28,10 @@ public class MenuActivity extends FragmentActivity{
         newFitbit.setArguments(getIntent().getExtras());
         ft.add(R.id.fitbitcontainer, newFitbit);
         
-        NewTripFragment newTrip = new NewTripFragment();
-        newTrip.setArguments(getIntent().getExtras());
-        ft.add(R.id.tripcontainer, newTrip);
+       
+        trip = new TripFragment();
+        trip.setArguments(getIntent().getExtras());
+        ft.add(R.id.tripcontainer, trip);
         
         MetricFragment metric = new MetricFragment();
         metric.setArguments(getIntent().getExtras());
@@ -36,36 +39,40 @@ public class MenuActivity extends FragmentActivity{
         
         ft.commit();
         
-        replaceFragments();
+//        replaceFragments();
         
     }
-    
-    public void replaceFragments(){
-    	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-    	FileHandler fh = new FileHandler(this.getApplicationContext());
+//    
+//    public void replaceFragments(){
+//    	FileHandler fh = new FileHandler(this.getBaseContext());
+//    	
+//    	Trip t = new Trip();
+//    	t.setLocationA(42.36, -71.05);
+//    	t.setLocationB(48.85, 2.35);
+//    	t.setTotalDistance();
+//    	t.setCurrentDistance(205);
+//    	
+//    	fh.writeTrip(t);
+//    	
+//    	Trip r = fh.readTrip();
+//    	
+//    	String text1 = "Your trip from " + r.locBToString() + " to " + r.locAToString() + ".";
+//    	String text2 = "So far " + r.getCurrentDistance() + "/" + r.getTotalDistance();
+//    	View v = findViewById(R.id.fragment_trip);
+//    	trip.setText(text1, text2, v);
     	
-    	Trip t = new Trip();
-    	t.setLocationA(42.36, -71.05);
-    	t.setLocationB(48.85, 2.35);
-    	t.setTotalDistance();
-    	t.setCurrentDistance(205);
+//    	TripFragment tripFrag = (TripFragment)getSupportFragmentManager().
+//                findFragmentById(R.id.fragment_trip);
+//    	tripFrag.setText(text1, text2, v);
+//    	
+//    	FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
     	
-    	fh.writeTrip(t);
-    	
-    	Trip r = fh.readTrip();
-    	
-    	String text1 = "Your trip from " + r.locBToString() + " to " + r.locAToString() + ".";
-    	String text2 = "So far " + r.getCurrentDistance() + "/" + r.getTotalDistance();
-    	
-    	TripFragment trip = new TripFragment();
-    	trip.setText(text1, text2);
-    	
-    	transaction.replace(R.id.fitbitcontainer, trip);
-    	transaction.commit();
+//    	transaction.replace(R.id.fitbitcontainer, trip);
+//    	transaction.commit();
     	//if(FileHandler.nullTrip == false){
     	//	Trip t = FileHandler.readTrip();
     	//	transaction.replace(R.id.fragment_container, TripFragment);
-    }
+//    }
     
 
 	

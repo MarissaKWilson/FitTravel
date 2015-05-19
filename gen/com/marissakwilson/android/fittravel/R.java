@@ -472,7 +472,6 @@ containing a value of this type.
         public static final int activity_main_view=0x7f0a002c;
         public static final int adjust_height=0x7f0a0001;
         public static final int adjust_width=0x7f0a0002;
-        public static final int basicAcitivity=0x7f0a0018;
         public static final int book_now=0x7f0a0011;
         public static final int button1=0x7f0a002d;
         public static final int button_clear_fitbit=0x7f0a0020;
@@ -483,6 +482,7 @@ containing a value of this type.
         public static final int classic=0x7f0a0015;
         public static final int donate_with_google=0x7f0a0014;
         public static final int firstLine=0x7f0a0028;
+        public static final int fitbit_info_container=0x7f0a001d;
         public static final int fitbitcontainer=0x7f0a0019;
         public static final int fragmentContainer=0x7f0a0021;
         public static final int fragment_container=0x7f0a0022;
@@ -491,11 +491,11 @@ containing a value of this type.
         public static final int holo_dark=0x7f0a0008;
         public static final int holo_light=0x7f0a0009;
         public static final int hybrid=0x7f0a0004;
-        public static final int listview_activity=0x7f0a001d;
         public static final int map=0x7f0a002a;
         public static final int map_container=0x7f0a0029;
         public static final int map_distance_progress=0x7f0a002b;
         public static final int match_parent=0x7f0a000f;
+        public static final int menuAcitivity=0x7f0a0018;
         public static final int metric_checkbox=0x7f0a0023;
         public static final int metriccontainer=0x7f0a001b;
         public static final int monochrome=0x7f0a0017;
@@ -520,19 +520,18 @@ containing a value of this type.
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_basic=0x7f030000;
+        public static final int acitivty_menu=0x7f030000;
         public static final int activity_fitbit=0x7f030001;
-        public static final int activity_menu=0x7f030002;
-        public static final int activity_new_trip=0x7f030003;
-        public static final int activity_oauth=0x7f030004;
-        public static final int activity_splash=0x7f030005;
-        public static final int activity_trip=0x7f030006;
-        public static final int fragment_container=0x7f030007;
-        public static final int fragment_measurement=0x7f030008;
-        public static final int fragment_new_fitbit=0x7f030009;
-        public static final int fragment_settings=0x7f03000a;
-        public static final int fragment_trip=0x7f03000b;
-        public static final int map_activity=0x7f03000c;
+        public static final int activity_new_trip=0x7f030002;
+        public static final int activity_oauth=0x7f030003;
+        public static final int activity_splash=0x7f030004;
+        public static final int activity_trip=0x7f030005;
+        public static final int fragment_container=0x7f030006;
+        public static final int fragment_measurement=0x7f030007;
+        public static final int fragment_new_fitbit=0x7f030008;
+        public static final int fragment_settings=0x7f030009;
+        public static final int fragment_trip=0x7f03000a;
+        public static final int map_activity=0x7f03000b;
     }
     public static final class menu {
         public static final int menu_activity_actions=0x7f0b0000;
