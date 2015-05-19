@@ -4,7 +4,8 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginBottom="5dp"
-    android:id="@+id/fragment_trip" >
+    android:id="@+id/fragment_trip"
+    >
     
     
 	<TextView
@@ -28,6 +29,7 @@
         android:layout_alignWithParentIfMissing="true"
         android:gravity="center_vertical"
         android:text="You have no trip!"
-        android:textSize="16sp" />
+        android:textSize="16sp" 
+        />
 
 </RelativeLayout> 

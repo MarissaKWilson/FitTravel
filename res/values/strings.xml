@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">FitTravel</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 	<string name="settings_title_label">Settings</string>
 	<string name="measurement_title_label">Prefer Metric?</string>
@@ -18,5 +17,5 @@
 	<string name="trip_start_hint">Enter starting location</string>
 	<string name="trip_end_hint">Enter ending location</string>
     <string name="splash_title">FitTravel</string>
-    
+    <string name="no_fitbit">No Fitbit found, click to connect!</string>
 </resources>

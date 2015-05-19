@@ -15,7 +15,8 @@
     <FrameLayout
         android:id="@+id/tripcontainer"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="beginTripDetail" />
     
     <FrameLayout
         android:id="@+id/metriccontainer"

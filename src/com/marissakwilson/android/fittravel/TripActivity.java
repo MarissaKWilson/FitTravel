@@ -28,10 +28,11 @@ public class TripActivity extends FragmentActivity {
 		TripDetailFragment tripDetail = new TripDetailFragment();
 		ft.add(R.id.trip_detail_container,tripDetail);
 		
+		NewTripButtonFragment newTripButton = new NewTripButtonFragment();
+		ft.add(R.id.button_new_trip_container, newTripButton);
+		
 		ft.commit();
 		
-		Button newTrip = (Button) findViewById(R.id.new_trip_button);
-//		
 //		newTrip.setOnClickListener(new OnClickListener(){
 //			@Override
 //			public void onClick(View v) {

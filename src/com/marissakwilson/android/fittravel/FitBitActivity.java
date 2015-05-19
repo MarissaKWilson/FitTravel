@@ -27,7 +27,6 @@ public class FitbitActivity extends FragmentActivity {
 	private FragmentManager fm;
 	private FragmentTransaction ft;
 	
-//	private OAuthManager oam;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -38,26 +37,20 @@ public class FitbitActivity extends FragmentActivity {
 	        if(savedInstanceState != null){
 	        	return;
 	        }
-	        NewFitbitFragment newFitbit = new NewFitbitFragment();
-	        newFitbit.setArguments(getIntent().getExtras());
-	        ft.add(R.id.fitbit_info_container, newFitbit);
+	        FitbitDetailFragment fitbitDetail = new FitbitDetailFragment();
+	        fitbitDetail.setArguments(getIntent().getExtras());
+	        ft.add(R.id.fitbit_info_container, fitbitDetail);
 	        
 	       
+	        FitbitSyncFragment sync = new FitbitSyncFragment();
+	        ft.add(R.id.sync_container, sync);
+	        
+	        FitbitDisconnectFragment disconnect = new FitbitDisconnectFragment();
+	        ft.add(R.id.disconnect_container, disconnect);
 	        
 	        ft.commit();
 		
-		mConnectFitbit = (Button)findViewById(R.id.button_connect_fitbit);
-//		mConnectFitbit.setOnClickListener(new View.OnClickListener() {			
-//			@Override
-//			public void onClick(View v) {
-//				Intent i = new Intent(this, OAuthActivity.class);
-//		        startActivity(i);
-//			}
-//		});
 		
-		mSyncFitbit = (Button)findViewById(R.id.sync_fitbit);
-		
-		mClearFitbit = (Button)findViewById(R.id.button_clear_fitbit);
 	
 		
 	}

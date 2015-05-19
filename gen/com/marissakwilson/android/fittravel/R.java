@@ -468,54 +468,58 @@ containing a value of this type.
         public static final int powered_by_google_light=0x7f020024;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0030;
-        public static final int activity_main_view=0x7f0a002e;
+        public static final int action_settings=0x7f0a0034;
+        public static final int activity_main_view=0x7f0a0032;
         public static final int adjust_height=0x7f0a0001;
         public static final int adjust_width=0x7f0a0002;
         public static final int book_now=0x7f0a0011;
-        public static final int button1=0x7f0a002f;
-        public static final int button_clear_fitbit=0x7f0a001f;
-        public static final int button_connect_fitbit=0x7f0a001d;
+        public static final int button1=0x7f0a0033;
+        public static final int button_clear_fitbit=0x7f0a0023;
+        public static final int button_connect_fitbit=0x7f0a0026;
+        public static final int button_new_trip_container=0x7f0a0021;
         public static final int buyButton=0x7f0a000d;
         public static final int buy_now=0x7f0a0012;
         public static final int buy_with_google=0x7f0a0013;
         public static final int classic=0x7f0a0015;
+        public static final int disconnect_container=0x7f0a001e;
         public static final int donate_with_google=0x7f0a0014;
-        public static final int firstLine=0x7f0a0029;
+        public static final int firstLine=0x7f0a002c;
+        public static final int fitbit_detail=0x7f0a0024;
         public static final int fitbit_info_container=0x7f0a001c;
         public static final int fitbitcontainer=0x7f0a0019;
-        public static final int fragmentContainer=0x7f0a0020;
-        public static final int fragment_container=0x7f0a0023;
-        public static final int fragment_trip=0x7f0a0027;
+        public static final int fragmentContainer=0x7f0a001f;
+        public static final int fragment_container=0x7f0a0022;
+        public static final int fragment_trip=0x7f0a002a;
         public static final int grayscale=0x7f0a0016;
         public static final int holo_dark=0x7f0a0008;
         public static final int holo_light=0x7f0a0009;
         public static final int hybrid=0x7f0a0004;
-        public static final int map=0x7f0a002b;
-        public static final int map_container=0x7f0a002a;
-        public static final int map_distance_progress=0x7f0a002c;
+        public static final int map=0x7f0a002f;
+        public static final int map_container=0x7f0a002e;
+        public static final int map_distance_progress=0x7f0a0030;
         public static final int match_parent=0x7f0a000f;
         public static final int menuAcitivity=0x7f0a0018;
-        public static final int metric_checkbox=0x7f0a0024;
+        public static final int metric_checkbox=0x7f0a0025;
         public static final int metriccontainer=0x7f0a001b;
         public static final int monochrome=0x7f0a0017;
-        public static final int new_trip_button=0x7f0a0022;
         public static final int none=0x7f0a0003;
         public static final int normal=0x7f0a0005;
         public static final int production=0x7f0a000a;
         public static final int sandbox=0x7f0a000b;
         public static final int satellite=0x7f0a0006;
-        public static final int secondLine=0x7f0a0028;
+        public static final int secondLine=0x7f0a002b;
         public static final int selectionDetails=0x7f0a000e;
-        public static final int setting_title=0x7f0a0025;
-        public static final int setting_toggle=0x7f0a0026;
+        public static final int setting_title=0x7f0a0027;
+        public static final int setting_toggle=0x7f0a0028;
         public static final int strict_sandbox=0x7f0a000c;
-        public static final int sync_fitbit=0x7f0a001e;
+        public static final int sync_container=0x7f0a001d;
+        public static final int sync_fitbit=0x7f0a0029;
         public static final int terrain=0x7f0a0007;
-        public static final int trip_detail_container=0x7f0a0021;
+        public static final int trip_detail_container=0x7f0a0020;
         public static final int tripcontainer=0x7f0a001a;
+        public static final int tripdetailtext=0x7f0a002d;
         public static final int viewPager=0x7f0a0000;
-        public static final int webview1=0x7f0a002d;
+        public static final int webview1=0x7f0a0031;
         public static final int wrap_content=0x7f0a0010;
     }
     public static final class integer {
@@ -528,13 +532,17 @@ containing a value of this type.
         public static final int activity_splash=0x7f030003;
         public static final int activity_trip=0x7f030004;
         public static final int fragment_container=0x7f030005;
-        public static final int fragment_measurement=0x7f030006;
-        public static final int fragment_new_fitbit=0x7f030007;
-        public static final int fragment_settings=0x7f030008;
-        public static final int fragment_trip=0x7f030009;
-        public static final int fragment_tripdetail=0x7f03000a;
-        public static final int map_activity=0x7f03000b;
-        public static final int oauthweb=0x7f03000c;
+        public static final int fragment_disconnectfitbit=0x7f030006;
+        public static final int fragment_fitbit_detail=0x7f030007;
+        public static final int fragment_measurement=0x7f030008;
+        public static final int fragment_new_fitbit=0x7f030009;
+        public static final int fragment_new_trip_button=0x7f03000a;
+        public static final int fragment_settings=0x7f03000b;
+        public static final int fragment_syncfitbit=0x7f03000c;
+        public static final int fragment_trip=0x7f03000d;
+        public static final int fragment_tripdetail=0x7f03000e;
+        public static final int map_activity=0x7f03000f;
+        public static final int oauthweb=0x7f030010;
     }
     public static final class menu {
         public static final int menu_activity_actions=0x7f0b0000;
@@ -544,10 +552,10 @@ containing a value of this type.
     }
     public static final class string {
         public static final int accept=0x7f060002;
-        public static final int action_settings=0x7f060025;
+        public static final int action_settings=0x7f060024;
         public static final int app_name=0x7f060023;
-        public static final int change_ending=0x7f06002d;
-        public static final int change_starting=0x7f06002c;
+        public static final int change_ending=0x7f06002c;
+        public static final int change_starting=0x7f06002b;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f060009;
@@ -650,21 +658,21 @@ containing a value of this type.
         public static final int create_calendar_message=0x7f060005;
         public static final int create_calendar_title=0x7f060004;
         public static final int decline=0x7f060003;
-        public static final int fitbit_clear_label=0x7f06002a;
-        public static final int fitbit_link_label=0x7f060029;
-        public static final int fitbit_sync_button=0x7f06002b;
-        public static final int fitbit_title_label=0x7f060028;
-        public static final int hello_world=0x7f060024;
-        public static final int measurement_title_label=0x7f060027;
-        public static final int new_location_title=0x7f060030;
-        public static final int new_trip_button=0x7f06002e;
-        public static final int new_trip_title=0x7f06002f;
-        public static final int settings_title_label=0x7f060026;
-        public static final int splash_title=0x7f060033;
+        public static final int fitbit_clear_label=0x7f060029;
+        public static final int fitbit_link_label=0x7f060028;
+        public static final int fitbit_sync_button=0x7f06002a;
+        public static final int fitbit_title_label=0x7f060027;
+        public static final int measurement_title_label=0x7f060026;
+        public static final int new_location_title=0x7f06002f;
+        public static final int new_trip_button=0x7f06002d;
+        public static final int new_trip_title=0x7f06002e;
+        public static final int no_fitbit=0x7f060033;
+        public static final int settings_title_label=0x7f060025;
+        public static final int splash_title=0x7f060032;
         public static final int store_picture_message=0x7f060001;
         public static final int store_picture_title=0x7f060000;
-        public static final int trip_end_hint=0x7f060032;
-        public static final int trip_start_hint=0x7f060031;
+        public static final int trip_end_hint=0x7f060031;
+        public static final int trip_start_hint=0x7f060030;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

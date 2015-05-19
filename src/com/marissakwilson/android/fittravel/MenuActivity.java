@@ -43,6 +43,10 @@ public class MenuActivity extends FragmentActivity{
 //        replaceFragments();
         
     }
+    public void beginTripDetail(View view){
+		 Intent i = new Intent(this, TripActivity.class);
+		 startActivity(i);
+	 }
     
 
 //    

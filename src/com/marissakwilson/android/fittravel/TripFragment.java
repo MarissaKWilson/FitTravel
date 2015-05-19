@@ -1,5 +1,6 @@
 package com.marissakwilson.android.fittravel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,5 +27,10 @@ public class TripFragment extends Fragment implements ISetTextInFragments {
 	        TextView d = (TextView) getView().findViewById(R.id.secondLine);
 	        d.setText(text2);
 	    }
+	 
+//	 public void beginTripDetial(View view){
+//		 Intent i = new Intent(getActivity(), TripActivity.class);
+//		 getActivity().startActivity(i);
+//	 }
 
 }
