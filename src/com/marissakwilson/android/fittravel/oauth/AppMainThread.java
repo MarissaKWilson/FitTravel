@@ -98,7 +98,9 @@ if user doesNOT ALLOW -> Bundle[{error=access_denied, error_description=The+user
 					
 					tokenResponse = values.toString();
 					
-					broadcastLoginResult(AppContext.COMMUNITY.INSTAGRAM, tokenResponse);
+					
+					
+//					broadcastLoginResult(AppContext.COMMUNITY.INSTAGRAM, tokenResponse);
 
 				}
 				catch (Exception ex1){
@@ -120,7 +122,7 @@ if user doesNOT ALLOW -> Bundle[{error=access_denied, error_description=The+user
 	private void broadcastLoginResult(AppContext.COMMUNITY community, String payload) {
 		
 		String intentAction = "";
-		String intentExtra = "";
+		String intentExtra = "payload";
 		try {
 			
 			intentAction = AppContext.BCAST_USERLOGIN_FITBIT;

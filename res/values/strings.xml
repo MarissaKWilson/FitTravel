@@ -18,4 +18,8 @@
 	<string name="trip_end_hint">Enter ending location</string>
     <string name="splash_title">FitTravel</string>
     <string name="no_fitbit">No Fitbit found, click to connect!</string>
+    <string name="search_hint">Search Places</string>
+    <string name="search_settings">Search Places</string>
+    <string name="action_search">Search</string>
+    
 </resources>

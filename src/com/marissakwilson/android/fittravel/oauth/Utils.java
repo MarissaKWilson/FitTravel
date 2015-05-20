@@ -199,7 +199,7 @@ public final class Utils {
             }
             
             if (params.containsKey("access_token")) {
-            	String decoded_token = URLDecoder.decode(params.getString("access_token"));
+            	String decoded_token = URLDecoder.decode(params.getString("access_token"), "UTF-8");
             	params.putString("access_token", decoded_token);
             }
                      

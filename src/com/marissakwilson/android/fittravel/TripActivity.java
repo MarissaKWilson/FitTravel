@@ -14,7 +14,7 @@ import android.widget.Button;
 public class TripActivity extends FragmentActivity {
 
 	private Trip mTrip;
-	private FitBit mFitbit;
+	private Fitbit mFitbit;
 	private final double KM_IN_MILE =1.60934;
 	
 	@Override
@@ -46,10 +46,10 @@ public class TripActivity extends FragmentActivity {
 	}
 	
 	
-		public void beginNewTrip(View view){
-			Intent i =  new Intent(this, NewTripActivity.class);
-			startActivity(i);
-		}
+	public void beginNewTrip(View view){
+		Intent i =  new Intent(this, NewTripActivity.class);
+		startActivity(i);
+	}
 
 //	@Override
 //	public boolean onCreateOptionsMenu(Menu menu) {

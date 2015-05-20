@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/disconnect_container"
         android:padding="16dp"
+        android:onClick="removeFitbit"
         /> 
     
 
