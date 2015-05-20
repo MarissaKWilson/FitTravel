@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -33,10 +34,16 @@ public class OAuthController extends Activity {
 	private String clientSecret="7d3b4bf3fae84867951f5c3f2c9d97e1";
 	private String authorizeURI = "https://www.fitbit.com/oauth2/authorize";
 	private String refressTokenURI = "https://api.fitbit.com/oauth2/token";
+	
+	private ProgressDialog mSpinner;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.oauthweb);
+		
+		 mSpinner = new ProgressDialog(getBaseContext());
+	        mSpinner.requestWindowFeature(Window.FEATURE_NO_TITLE);
+	        mSpinner.setMessage("Loading...");
 		
 //		webview.setWebViewClient(new WebViewClient(){
 //			
