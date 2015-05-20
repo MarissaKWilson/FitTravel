@@ -40,10 +40,9 @@ public class AppContext {
     public static final String BCAST_USERLOGIN_FSQ = "com.wareninja.android.opensource.oauth2login.BCAST_USERLOGIN_FSQ";
     public static final String INTENT_EXTRA_USERLOGIN_FACEBOOK = "USERLOGIN_FACEBOOK";
     public static final String BCAST_USERLOGIN_FACEBOOK = "com.wareninja.android.opensource.oauth2login.BCAST_USERLOGIN_FACEBOOK";
-    public static final String INTENT_EXTRA_USERLOGIN_GOWALLA = "USERLOGIN_GOWALLA";
-    public static final String BCAST_USERLOGIN_GOWALLA = "com.wareninja.android.opensource.oauth2login.BCAST_USERLOGIN_GOWALLA";
-    public static final String INTENT_EXTRA_USERLOGIN_TWILIO = "USERLOGIN_TWILIO";
-    public static final String BCAST_USERLOGIN_TWILIO = "com.wareninja.android.opensource.oauth2login.BCAST_USERLOGIN_TWILIO";
+    public static final String INTENT_EXTRA_USERLOGIN_FITBIT = "USERLOGIN_FITBIT";
+    public static final String BCAST_USERLOGIN_FITBIT = "com.marissakwilson.android.fittravel.BCAST_USERLOGIN_FITBIT";
+
     
     public static final String INTENT_EXTRA_USERLOGOUT_FSQ = "USERLOGOUT_FSQ";
     public static final String BCAST_USERLOGOUT_FSQ = "com.wareninja.android.opensource.oauth2login.BCAST_USERLOGOUT_FSQ";
@@ -70,6 +69,8 @@ public class AppContext {
 	public static final String FITBIT_APP_OAUTH_BASEURL = "https://www.fitbit.com";
 	public static final String FITBIT_APP_OAUTH_URL = "/oauth2/authorize/";
 	public static final String FITBIT_APP_REFRESH_URL = "/oauth2/token";
+	public static String code;
+
 	
 	
 

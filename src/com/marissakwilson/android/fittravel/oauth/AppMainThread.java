@@ -123,22 +123,8 @@ if user doesNOT ALLOW -> Bundle[{error=access_denied, error_description=The+user
 		String intentExtra = "";
 		try {
 			
-			if (AppContext.COMMUNITY.FOURSQUARE == community) {
-				intentAction = AppContext.BCAST_USERLOGIN_FSQ;
-				intentExtra = AppContext.INTENT_EXTRA_USERLOGIN_FSQ;
-			}
-			else if (AppContext.COMMUNITY.GOWALLA == community) {
-				intentAction = AppContext.BCAST_USERLOGIN_GOWALLA;
-				intentExtra = AppContext.INTENT_EXTRA_USERLOGIN_GOWALLA;
-			}
-			else if (AppContext.COMMUNITY.FACEBOOK == community) {
-				intentAction = AppContext.BCAST_USERLOGIN_FACEBOOK;
-				intentExtra = AppContext.INTENT_EXTRA_USERLOGIN_FACEBOOK;
-			}
-			else if (AppContext.COMMUNITY.TWILIO == community) {
-				intentAction = AppContext.BCAST_USERLOGIN_TWILIO;
-				intentExtra = AppContext.INTENT_EXTRA_USERLOGIN_TWILIO;
-			}
+			intentAction = AppContext.BCAST_USERLOGIN_FITBIT;
+			intentExtra = AppContext.INTENT_EXTRA_USERLOGIN_FITBIT;
 			
 			if(LOGGING.DEBUG)Log.d(TAG, "sending Broadcast! " 
 					+ "|intentAction->"+intentAction

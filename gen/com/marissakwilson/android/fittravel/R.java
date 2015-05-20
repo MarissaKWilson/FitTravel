@@ -458,16 +458,17 @@ containing a value of this type.
         public static final int common_signin_btn_text_pressed_light=0x7f02001a;
         public static final int fitbit_logo_dark_1000px=0x7f02001b;
         public static final int fitbit_logo_light_1000px=0x7f02001c;
-        public static final int ic_launcher=0x7f02001d;
-        public static final int ic_plusone_medium_off_client=0x7f02001e;
-        public static final int ic_plusone_small_off_client=0x7f02001f;
-        public static final int ic_plusone_standard_off_client=0x7f020020;
-        public static final int ic_plusone_tall_off_client=0x7f020021;
-        public static final int ic_walk=0x7f020022;
-        public static final int img_icon_facebooklogin_header_small=0x7f020023;
-        public static final int img_icon_notification=0x7f020024;
-        public static final int powered_by_google_dark=0x7f020025;
-        public static final int powered_by_google_light=0x7f020026;
+        public static final int ic_action_settings=0x7f02001d;
+        public static final int ic_launcher=0x7f02001e;
+        public static final int ic_plusone_medium_off_client=0x7f02001f;
+        public static final int ic_plusone_small_off_client=0x7f020020;
+        public static final int ic_plusone_standard_off_client=0x7f020021;
+        public static final int ic_plusone_tall_off_client=0x7f020022;
+        public static final int ic_walk=0x7f020023;
+        public static final int img_icon_facebooklogin_header_small=0x7f020024;
+        public static final int img_icon_notification=0x7f020025;
+        public static final int powered_by_google_dark=0x7f020026;
+        public static final int powered_by_google_light=0x7f020027;
     }
     public static final class id {
         public static final int action_settings=0x7f0a0038;

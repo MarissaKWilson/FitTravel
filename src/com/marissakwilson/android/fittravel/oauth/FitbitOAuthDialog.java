@@ -55,8 +55,8 @@ public class FitbitOAuthDialog extends Dialog {
     static final float[] DIMENSIONS_LANDSCAPE = {460, 260};
     static final float[] DIMENSIONS_PORTRAIT = {280, 420};
     static final FrameLayout.LayoutParams FILL = 
-        new FrameLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, 
-                         ViewGroup.LayoutParams.FILL_PARENT);
+        new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 
+                         ViewGroup.LayoutParams.MATCH_PARENT);
     static final int MARGIN = 4;
     static final int PADDING = 2;
     static final String DISPLAY_STRING = "touch";
@@ -88,7 +88,8 @@ public class FitbitOAuthDialog extends Dialog {
         setUpWebView();
         Display display = getWindow().getWindowManager().getDefaultDisplay();
         final float scale = getContext().getResources().getDisplayMetrics().density;
-        float[] dimensions = display.getWidth() < display.getHeight() ?
+        @SuppressWarnings("deprecation")
+		float[] dimensions = display.getWidth() < display.getHeight() ?
         		DIMENSIONS_PORTRAIT : DIMENSIONS_LANDSCAPE;
         addContentView(mContent, new FrameLayout.LayoutParams(
         		(int) (dimensions[0] * scale + 0.5f),
@@ -174,7 +175,9 @@ public class FitbitOAuthDialog extends Dialog {
                            error.equals("OAuthAccessDeniedException")) {
                     mListener.onCancel();
                 } 
-
+                
+                AppContext.code=values.getString("code");
+                
                 FitbitOAuthDialog.this.dismiss();
             }
         }   

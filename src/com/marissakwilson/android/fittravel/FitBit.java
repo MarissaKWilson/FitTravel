@@ -25,6 +25,7 @@ public class FitBit{
 		mDistance = 301200;
 		mUserMetric = true;
 		mStrideLength = 55;
+		
 	}
 
 

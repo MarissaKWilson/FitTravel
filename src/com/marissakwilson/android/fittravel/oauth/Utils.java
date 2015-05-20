@@ -28,6 +28,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -89,11 +90,17 @@ public final class Utils {
         
         StringBuilder sb = new StringBuilder();
         boolean first = true;
-        for (String key : parameters.keySet()) {
-            if (first) first = false; else sb.append("&");
-            sb.append(URLEncoder.encode(key) + "=" +
-                      URLEncoder.encode(parameters.getString(key)));
-        }
+        try {
+        	for (String key : parameters.keySet()) {
+        		if (first) first = false; else sb.append("&");
+            	
+        		sb.append(URLEncoder.encode(key, "UTF-8") + "=" +
+        				URLEncoder.encode(parameters.getString(key), "UTF-8"));
+			
+        	}
+        } catch (UnsupportedEncodingException e) {
+        	e.printStackTrace();
+        	}
         return sb.toString();
     }
 
@@ -105,11 +112,14 @@ public final class Utils {
                 String v[] = parameter.split("=");
                 // YG: in case param has no value
                 if (v.length==2){
-                	params.putString(URLDecoder.decode(v[0]),
-                                 URLDecoder.decode(v[1]));
+                	params.putString(v[0],v[1]);
                 }
                 else {
-                	params.putString(URLDecoder.decode(v[0])," ");
+                	try {
+						params.putString(URLDecoder.decode(v[0],"UTF-8")," ");
+					} catch (UnsupportedEncodingException e) {
+						e.printStackTrace();
+					}
                 }
             }
         }
