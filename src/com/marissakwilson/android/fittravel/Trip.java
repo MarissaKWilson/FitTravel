@@ -12,12 +12,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class Trip implements Serializable{
 	
 	private static final long serialVersionUID = 4840490339660604225L;
-//	private static final String JSON_ID = "id";
-//	private static final String JSON_LOCATIONA = "locationA";
-//	private static final String JSON_LOCATIONB = "locationB";
-//	private static final String JSON_CURRENTDISTANCE = "currentDistance";
-//	private static final String JSON_TOTALDISTANCE = "totalDistance";
-	
+
 	private String mTitle;
 	protected boolean mMetric;
 	protected double[] mLocationA = new double[2];
@@ -131,14 +126,6 @@ public class Trip implements Serializable{
 //		return data;
 //	}
 
-//
-//	public JSONObject toJSON() throws JSONException {
-//		JSONObject json = new JSONObject();
-//		json.put(JSON_LOCATIONA, mLocationA.toString());
-//		json.put(JSON_LOCATIONB, mLocationB.toString());
-//		json.put(JSON_CURRENTDISTANCE, mCurrentDistance);
-//		json.put(JSON_TOTALDISTANCE, mTotalDistance);
-//		return null;
-//	}
+
 	
 }
