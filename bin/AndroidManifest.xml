@@ -24,7 +24,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MenuActivity"
+            android:name="com.marissakwilson.android.fittravel.oauth.AppMainThread"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity  android:name=".MenuActivity"/>
         <activity android:name=".OAuthActivity" />
         <activity android:name=".FitbitActivity" />
         <activity android:name=".TripActivity" />

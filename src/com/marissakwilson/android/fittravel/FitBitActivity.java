@@ -2,6 +2,8 @@ package com.marissakwilson.android.fittravel;
 
 import java.util.ArrayList;
 
+import com.marissakwilson.android.fittravel.oauth.AppMainThread;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -56,7 +58,8 @@ public class FitbitActivity extends FragmentActivity {
 	}
 	
 		public void beginOAuth(View view){
-			Intent i = new Intent(this, OAuthActivity.class);
+			Intent i = new Intent(this, AppMainThread.class);
+			startActivity(i);
 		}
 	
 	
